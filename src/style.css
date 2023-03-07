@@ -28,7 +28,33 @@ main {
   align-self: center;
   font-weight: 700;
   background-color: inherit;
+  cursor: pointer;
 }
+.leaders {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 500px;
+  border: 2px solid black;
+  margin-top: 30px;
+}
+
+.leaders div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.leaders div:nth-child(odd) {
+  background-color: #d2d2d2;
+}
+
+.leaders div:nth-child(even) {
+  background-color: white;
+}
+
 .add-score h2 {
   font-size: 2em;
 }
@@ -47,4 +73,5 @@ form button {
   align-self: flex-end;
   background-color: inherit;
   padding: 5px 10px;
+  cursor: pointer;
 }
