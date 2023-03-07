@@ -8,28 +8,26 @@ header {
   padding-top: 50px;
   padding-left: 2%;
 }
+
 header h1 {
   font-size: 4em;
 }
+
 main {
   padding: 35px 10%;
   display: flex;
   gap: 150px;
 }
+
 .recent-scores {
   display: flex;
   gap: 50px;
 }
+
 .recent-scores h2 {
   font-size: 2em;
 }
-.recent-scores button {
-  padding: 5px 8px;
-  align-self: center;
-  font-weight: 700;
-  background-color: inherit;
-  cursor: pointer;
-}
+
 .leaders {
   display: flex;
   flex-direction: column;
@@ -58,6 +56,7 @@ main {
 .add-score h2 {
   font-size: 2em;
 }
+
 form {
   margin-top: 30px;
   display: flex;
@@ -65,11 +64,12 @@ form {
   width: 300px;
   row-gap: 20px;
 }
-form input {
+
+input {
   padding: 6px;
 }
 
-form button {
+button {
   align-self: flex-end;
   background-color: inherit;
   padding: 5px 10px;
