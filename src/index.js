@@ -2,6 +2,9 @@ import "./style.css";
 
 
 const leaders = document.querySelector(".leaders");
+const form = document.querySelector('form')
+const {name,score} = form.elements
+
 
 const generateScores = (data) => {
   data.forEach((item) => {
