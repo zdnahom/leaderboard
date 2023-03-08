@@ -1,6 +1,6 @@
 import "./style.css";
 
-const scores = [100, 20, 50, 78, 12, 77, 42];
+
 const leaders = document.querySelector(".leaders");
 
 const generateScores = (data) => {
