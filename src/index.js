@@ -7,6 +7,7 @@ const {name,score} = form.elements
 
 
 const generateScores = (data) => {
+  
   data.forEach((item) => {
     const player = document.createElement("div");
     player.innerHTML = `
@@ -34,7 +35,6 @@ const createNewGame = async () => {
 const refreshBoard = async () => {
   const res = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BwlgxYvt8p5JJSu0N3Ht/scores`);
   const data=await res.json()
-  console.log(data)
   generateScores(data.result);
 };
 
@@ -53,6 +53,10 @@ const addScore= async (userName,score)=>{
     }
   );
 }
+refreshButton.addEventListener('click',()=>{
+  leaders.innerHTML=""
+  refreshBoard()
+})
 
 form.addEventListener('submit',(event)=>{
   event.preventDefault()
@@ -61,4 +65,3 @@ form.addEventListener('submit',(event)=>{
   score.value=""
 })
 
-refreshBoard()
