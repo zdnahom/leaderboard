@@ -1,6 +1,6 @@
 import "./style.css";
 
-
+const refreshButton=document.querySelector('.recent-scores button')
 const leaders = document.querySelector(".leaders");
 const form = document.querySelector('form')
 const {name,score} = form.elements
@@ -34,6 +34,7 @@ const createNewGame = async () => {
 const refreshBoard = async () => {
   const res = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BwlgxYvt8p5JJSu0N3Ht/scores`);
   const data=await res.json()
+  console.log(data)
   generateScores(data.result);
 };
 
@@ -56,6 +57,8 @@ const addScore= async (userName,score)=>{
 form.addEventListener('submit',(event)=>{
   event.preventDefault()
   addScore(name.value,score.value)
+  name.value=""
+  score.value=""
 })
 
 refreshBoard()
