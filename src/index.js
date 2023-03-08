@@ -7,7 +7,7 @@ const generateScores = (data) => {
   data.forEach((item) => {
     const player = document.createElement("div");
     player.innerHTML = `
-          <p> Name: ${item.user}</p>
+          <p> ${item.user} : ${item.score}</p>
           `;
     leaders.appendChild(player);
   });
