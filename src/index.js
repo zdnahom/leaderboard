@@ -14,7 +14,7 @@ const generateScores = (data) => {
 };
 
 const createNewGame = async () => {
-  const res = await fetch(
+  await fetch(
     "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/",
     {
       method: "POST",
@@ -26,16 +26,28 @@ const createNewGame = async () => {
       },
     }
   );
-  const data = await res.json();
-  const id = await data.result.replace(/(Game with ID:)|(added.)|(\W)/g, "");
-  // console.log(id)
-  return id
 };
 
 const refreshBoard = async () => {
   const res = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BwlgxYvt8p5JJSu0N3Ht/scores`);
   const data=await res.json()
-  generateScores(data);
+  generateScores(data.result);
 };
+
+const addScore= async (userName,score)=>{
+   await fetch(
+    "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BwlgxYvt8p5JJSu0N3Ht/scores",
+    {
+      method: "POST",
+      body: JSON.stringify({
+        user: userName,
+        score:score
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    }
+  );
+}
 
 refreshBoard()
