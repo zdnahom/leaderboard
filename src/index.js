@@ -34,7 +34,20 @@ const createNewGame = async () => {
 const refreshBoard = async () => {
   const res = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BwlgxYvt8p5JJSu0N3Ht/scores');
   const data = await res.json();
-  generateScores(data.result);
+  const result = data.result
+  
+  result.sort((a,b)=>{
+    if ( Number(a.score) > Number(b.score )){
+     return -1;
+   }
+   if ( Number(a.score) > Number(b.score )){
+     return 1;
+   }
+   return 0;
+   
+   })
+   
+  generateScores(result);
 };
 
 const addScore = async (userName, score) => {
