@@ -53,4 +53,9 @@ const addScore= async (userName,score)=>{
   );
 }
 
+form.addEventListener('submit',(event)=>{
+  event.preventDefault()
+  addScore(name.value,score.value)
+})
+
 refreshBoard()
