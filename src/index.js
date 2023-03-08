@@ -64,4 +64,6 @@ form.addEventListener('submit',(event)=>{
   name.value=""
   score.value=""
 })
-
+window.addEventListener("DOMContentLoaded",()=>{
+  refreshBoard()
+})
