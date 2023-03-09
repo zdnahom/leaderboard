@@ -118,6 +118,10 @@ form {
 form button {
   align-self: flex-end;
 }
+form span{
+  color: rgb(108, 247, 108);
+  font-size: 1em;
+}
 input {
   padding: 8px;
   outline: none;
