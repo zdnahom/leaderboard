@@ -1,19 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Press Start 2P', cursive;
 }
-body{
+
+body {
   background-image: url('https://cdna.artstation.com/p/assets/images/images/047/517/388/original/inkpendude-portal-storm.gif?1647794887');
   background-size: cover;
   height: 100vh;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
-button {
+
+.btn {
   background-color: #f8cb01;
   border-radius: 0.5rem;
   border: 1px solid #ffe260;
@@ -25,7 +28,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.btn:hover {
   transform: scale(1.2);
 }
 
@@ -45,7 +48,8 @@ main {
   flex-direction: column;
   gap: 50px;
 }
-.leaderboard-section{
+
+.leaderboard-section {
   width: 100%;
 }
 
@@ -58,9 +62,11 @@ main {
   font-size: 1.5em;
   color: #fff;
 }
-.recent-scores button{
+
+.recent-scores button {
   align-self: center;
 }
+
 .leaders {
   display: flex;
   flex-direction: column;
@@ -69,16 +75,13 @@ main {
   margin-top: 30px;
   max-height: 500px;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .leaders::-webkit-scrollbar {
   display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.leaders {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .leaders div {
@@ -96,33 +99,38 @@ main {
 .leaders div:nth-child(even) {
   background-color: white;
 }
+
 .leaders div:nth-child(1) {
   background-color: rgb(108, 247, 108);
 }
 
-.add-score{
+.add-score {
   width: 80%;
 }
+
 .add-score h2 {
   font-size: 1.5em;
   color: #fff;
 }
 
-form {
+.add-score form {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   width: 100%;
   row-gap: 20px;
 }
-form button {
+
+.add-score button {
   align-self: flex-end;
 }
-form span{
+
+.add-score span {
   color: rgb(108, 247, 108);
   font-size: 1em;
 }
-input {
+
+.add-score input {
   padding: 8px;
   outline: none;
 }
@@ -133,11 +141,12 @@ input {
     flex-direction: row;
     gap: 10%;
   }
-  .leaderboard-section{
+
+  .leaderboard-section {
     width: 50%;
   }
-  .add-score{
+
+  .add-score {
     width: 30%;
   }
-
 }
