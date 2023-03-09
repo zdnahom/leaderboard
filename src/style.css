@@ -65,7 +65,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  border: 1px solid #f5e9b4;
+  border: 2px solid #f5e9b4;
   margin-top: 30px;
   max-height: 500px;
   overflow-y: scroll;
@@ -96,6 +96,10 @@ main {
 .leaders div:nth-child(even) {
   background-color: white;
 }
+.leaders div:nth-child(1) {
+  background-color: rgb(108, 247, 108);
+}
+
 .add-score{
   width: 80%;
 }

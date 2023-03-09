@@ -10,7 +10,7 @@ const generateScores = (data) => {
   data.forEach((item) => {
     const player = document.createElement('div');
     player.innerHTML = `
-          <p> ${item.user} : ${item.score}</p>
+          <span>${item.user}</span>  <span>${item.score}</span>
           `;
     leaders.appendChild(player);
   });
@@ -46,7 +46,7 @@ const refreshBoard = async () => {
    return 0;
    
    })
-   
+
   generateScores(result);
 };
 
