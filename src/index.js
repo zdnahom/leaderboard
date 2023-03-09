@@ -4,6 +4,8 @@ import './style.css';
 const refreshButton = document.querySelector('.recent-scores button');
 const leaders = document.querySelector('.leaders');
 const form = document.querySelector('form');
+const successElement=document.querySelector('form span')
+
 const { name, score } = form.elements;
 
 const generateScores = (data) => {
@@ -75,6 +77,7 @@ form.addEventListener('submit', (event) => {
   addScore(name.value, score.value);
   name.value = '';
   score.value = '';
+  successElement.textContent="Successfully added score to the game!"
 });
 window.addEventListener('DOMContentLoaded', () => {
   refreshBoard();
