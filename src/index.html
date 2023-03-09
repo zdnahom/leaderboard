@@ -17,19 +17,25 @@
       <h1>Leaderboard</h1>
     </header>
     <main>
-      <section>
+      <section class="leaderboard-section">
         <article class="recent-scores">
             <h2>Recent scores</h2>
-            <button type="button">Refresh</button>
+            <button type="button" class="btn">Refresh</button>
         </article>
-        <article class="leaders"></article>
+        <article class="leaders">
+          <div>
+            <span>User</span> 
+            <span>Score</span>
+          </div>
+        </article>
       </section>
       <aside class="add-score">
         <h2>Add your score</h2>
         <form action="">
           <input type="text" name="name" placeholder="Your name" required/>
           <input type="number" name="score" placeholder="Your score" required/>
-          <button type="submit">Submit</button>
+          <span></span>
+          <button type="submit" class="btn">Submit</button>
         </form>
       </aside>
     </main>
